@@ -39,6 +39,18 @@
       </div>
     </div>
     <div class="hidden xl:flex">
+      <div class="header-nav relative px-3 py-2.5 flex">
+        <span class="mr-2 tracking-wider text-md flex items-center select-none">
+          <span
+            class="text-white group-hover:text-gray-200 font-sora"
+            @click.stop="handleGoToPortfolio"
+          >
+            {{ $t('Portfolio') }}
+          </span>
+        </span>
+      </div>
+    </div>
+    <div class="hidden xl:flex">
       <v-spot />
     </div>
     <div class="hidden xl:flex">
@@ -134,6 +146,16 @@ export default Vue.extend({
         }
         else{
         this.$router.push({ name: 'market' })
+        }
+    },
+    handleGoToPortfolio() {
+      const authenticate = verifyUserAuthentication();
+      if (!authenticate) {
+        this.$accessor.modal.openModal(Modal.Login);
+         document.body.style.overflow = 'hidden';
+        }
+        else{
+        this.$router.push({ name: 'portfolio' })
         }
     }
   }

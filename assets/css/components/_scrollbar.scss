@@ -1,0 +1,21 @@
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: theme('colors.dark.700') theme('colors.dark.900');
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background:#121035;
+
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color:#2A2769;
+  border-radius: 20px;
+  border: 2px solid theme('colors.dark.900');
+}

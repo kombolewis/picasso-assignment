@@ -45,7 +45,7 @@
             class="text-white group-hover:text-gray-200 font-sora"
             @click.stop="handleGoToPortfolio"
           >
-            {{ $t('Portfolio') }}
+            Portfolio
           </span>
         </span>
       </div>

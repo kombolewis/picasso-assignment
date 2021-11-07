@@ -5,28 +5,24 @@
     <app-header />
 
     <div class="container xl:px-32 xl:pb-4 max-w-screen-laptop-screen">
-      <h3 class="lg:text-white text-lg font-normal font-sora mb-4 text-center  xl:text-3xl xl:text-left 2xl:mx-auto my-14">
+      <p class="lg:text-white text-lg font-normal font-sora mb-4 text-center  xl:text-2xl xl:text-left 2xl:mx-auto my-14">
       Open Positions
-      </h3>
+      </p>
       <v-panel>
         <div
           slot="context"
-          class="rounded-t-md bg-secondary-gradient-market pt-3 px-3"
+          class="rounded-t-md bg-secondary-gradient-market pt-3 px-3" 
         >
-          <div class="flex items-center justify-between">
-            <div class="tabsPink ">
-              <ul role="tablist" class="tablist">
-                <li role="tab" class="tab">
-                  <span>Open Positions</span>
-                </li>
-              </ul>
+          <div class="flex items-center justify-between text-red-300 text-xl px-2 py-4">
+            <div>
+              Open Positions
             </div>
           </div>
         </div>
         <portfolio />
       </v-panel>
 
-      <h3 class="lg:text-white text-lg font-normal font-sora mb-4 text-center  xl:text-3xl xl:text-left 2xl:mx-auto my-14">
+      <h3 class="lg:text-white text-lg font-normal font-sora mb-4 text-center  xl:text-2xl xl:text-left 2xl:mx-auto my-14">
         Open Orders
       </h3>
       <v-panel>
@@ -34,16 +30,12 @@
           slot="context"
           class="rounded-t-md bg-secondary-gradient-market pt-3 px-3"
         >
-          <div class="flex items-center justify-between">
-            <div class="tabsPink ">
-              <ul role="tablist" class="tablist">
-                <li role="tab" class="tab">
-                  <span>Open Derivative Orders (0)</span>
-                </li>
-                <li role="tab" class="tab">
-                  <span>Open Spot Orders (0)</span>
-                </li>
-              </ul>
+          <div class="flex items-center  text-xl px-2 py-4">
+            <div>
+              Open Derivative Orders (0)
+            </div>
+            <div class=" text-red-300 pl-6">
+              Open Spot Orders (0)
             </div>
           </div>
         </div>

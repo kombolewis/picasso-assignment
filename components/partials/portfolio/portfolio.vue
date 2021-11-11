@@ -3,89 +3,107 @@
     <div class="w-full py-2 px-2 xl:py-1"></div>
     <div class="table-responsive table-compact overflow-y-hidden">
       <table class="table">
-        <thead>
-          <tr class="flex w-full justify-between bg-light-blue px-2">
-            <th is="v-ui-table-th" class="text-left font-normal text-sm h-16 mx-2" flex>
-              <v-ui-text>Market</v-ui-text>
-            </th>
-            <th is="v-ui-table-th" class="text-left font-normal text-sm h-16 mx-2" flex>
-              <v-ui-text>Entry Price</v-ui-text>
-            </th>
-            <th is="v-ui-table-th" class="text-left font-normal text-sm h-16 mx-2" flex>
-              <v-ui-text>Amount</v-ui-text>
+      <thead class="">
+        <tr class="bg-light-blue px-2 ">
+          <th is="v-ui-table-th" center class="font-normal text-sm h-16 mx-2">
+            <span>Market</span>
+          </th>
+          <th is="v-ui-table-th" center class="font-normal text-sm h-16 mx-2">
+            <span>Entry Price</span>
+          </th>
+          <th is="v-ui-table-th" center class="font-normal text-sm h-16 mx-2">
+            <span>Amount</span>
               <v-ui-icon
                 :icon="Icon.Info"
                 sm
                 class="text-gray-500 group-hover:text-gray-300 p-1 cursor-pointer"
               />
-            </th>
-            <th is="v-ui-table-th" class="text-left font-normal text-sm h-16 mx-2" flex>
-              <v-ui-text>Liquidation Price</v-ui-text>
+          </th>
+          <th is="v-ui-table-th" center class="font-normal text-sm h-16 mx-2">
+            <span>Liquidation Price</span>
               <v-ui-icon
                 :icon="Icon.Info"
                 sm
                 class="text-gray-500 group-hover:text-gray-300 p-1 cursor-pointer"
               />
-            </th>
-            <th is="v-ui-table-th" class="text-left font-normal text-sm h-16 mx-2" flex>
-              <v-ui-text>Side</v-ui-text>
+          </th>
+          <th is="v-ui-table-th" center class="font-normal text-sm h-16 mx-2">
+            <span>Side</span>
               <v-ui-icon
                 :icon="Icon.Info"
                 sm
                 class="text-gray-500 group-hover:text-gray-300 p-1 cursor-pointer"
               />
-            </th>
-            <th is="v-ui-table-th" class="text-left font-normal text-sm h-16 mx-2" flex>
-              <v-ui-text>Unrealized Pnl</v-ui-text>
+          </th>
+          <th is="v-ui-table-th" center class="font-normal text-sm h-16 mx-2">
+            <span>Unrealized Pnl</span>
               <v-ui-icon
                 :icon="Icon.Info"
                 sm
                 class="text-gray-500 group-hover:text-gray-300 p-1 cursor-pointer"
               />
-            </th>
-            <th is="v-ui-table-th" class="text-left font-normal text-sm h-16 mx-2" flex>
-              <v-ui-text>Notionol Value</v-ui-text>
+          </th>
+          <th is="v-ui-table-th" center class="font-normal text-sm h-16 mx-2">
+            <span>Notionol Value</span>
               <v-ui-icon
                 :icon="Icon.Info"
                 sm
                 class="text-gray-500 group-hover:text-gray-300 p-1 cursor-pointer"
               />
-            </th>
-            <th is="v-ui-table-th" class="text-left font-normal text-sm h-16 mx-2" flex>
-              <v-ui-text>Margin</v-ui-text>
+          </th>
+          <th is="v-ui-table-th" center class="font-normal text-sm h-16 mx-2">
+            <span>Margin</span>
               <v-ui-icon
                 :icon="Icon.Info"
                 sm
                 class="text-gray-500 group-hover:text-gray-300 p-1 cursor-pointer"
               />
-            </th>
-            <th is="v-ui-table-th" class="text-left font-normal text-sm h-16 mx-2" flex>
-              <v-ui-text>Leverage</v-ui-text>
+          </th>
+          <th is="v-ui-table-th" center class="font-normal text-sm h-16 mx-2">
+            <span>Leverage</span>
               <v-ui-icon
                 :icon="Icon.Info"
                 sm
                 class="text-gray-500 group-hover:text-gray-300 p-1 cursor-pointer"
               />
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr
-            v-for="(position,index) in  openPosData"
-            :key="index"
-            class="flex justify-between items-center h-12 px-2 h-16 orders"
-          >
-            <td>{{position.Market}}</td>
-            <td>{{position.Entry_Price}}</td>
-            <td>{{position.Amount}}</td>
-            <td>{{position.Liquidation_Price}}</td>
-            <td>{{position.Side}}</td>
-            <td>{{position.Unrealized_Pnl}}</td>
-            <td>{{position.Notionol_Value}}</td>
-            <td>{{position.Margin}}</td>
-            <td>{{position.Leverage}}</td> 
-          </tr>
-        </tbody>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="(position, index) in openPosData"
+          :key="index"
+          :class="'bg-red-900 orders'">
+          <td is="v-ui-table-td"  center class="h-8 ">
+            <v-ui-text muted-lg emp >{{position.Market}}</v-ui-text>
+          </td>
+          <td is="v-ui-table-td"  center class="h-8 ">
+            <v-ui-text muted-lg emp >{{position.Entry_Price}}</v-ui-text>
+          </td>
+          <td is="v-ui-table-td"  center class="h-8 ">
+            <v-ui-text muted-lg emp >{{position.Amount}}</v-ui-text>
+          </td>
+          <td is="v-ui-table-td"  center class="h-8 ">
+            <v-ui-text muted-lg emp >{{position.Liquidation_Price}}</v-ui-text>
+          </td>
+          <td is="v-ui-table-td"  center class="h-8 ">
+            <v-ui-text muted-lg emp >{{position.Side}}</v-ui-text>
+          </td>
+          <td is="v-ui-table-td"  center class="h-8 ">
+            <v-ui-text muted-lg emp >{{position.Unrealized_Pnl}}</v-ui-text>
+          </td>
+          <td is="v-ui-table-td"  center class="h-8 ">
+            <v-ui-text muted-lg emp >{{position.Notionol_Value}}</v-ui-text>
+          </td>
+          <td is="v-ui-table-td"  center class="h-8 ">
+            <v-ui-text muted-lg emp >{{position.Margin}}</v-ui-text>
+          </td>
+          <td is="v-ui-table-td"  center class="h-8 ">
+            <v-ui-text muted-lg emp >{{position.Leverage}}</v-ui-text>
+          </td>
+
+        </tr>
+
+      </tbody>
       </table>
     </div>    
   </div>

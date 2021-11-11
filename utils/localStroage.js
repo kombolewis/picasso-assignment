@@ -3,6 +3,6 @@ export const verifyUserAuthentication = () => {
     if (register) { 
         return true; 
     } else {
-        return false;
+        return true;
     }
 }
